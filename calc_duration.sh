@@ -21,6 +21,6 @@ seconds=$((seconds % 60))
 
 
 result="${days}d${hours}h${minutes}m${seconds}s"
-result=$(echo "$result" | sed -r 's#(\b|[dhms])0[dhms]#\1#g')
+result=$(echo "$result" | sed -r 's#(^|[dhms])0[dhms]#\1#g')
 
 echo "$result"
